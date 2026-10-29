@@ -1,0 +1,97 @@
+/* ZeroClip – Webseite für die TikTok-App-Prüfung
+   Zum Umbenennen: ersetze überall "ZeroClip" durch deinen App-Namen. */
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --text: #e7e9ee;
+  --muted: #9aa3b2;
+  --accent: #5b8cff;
+  --accent2: #7b61ff;
+  --border: #262b36;
+  --maxw: 860px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* Kopf */
+.top {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(15,17,21,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.nav a { color: var(--muted); margin-left: 22px; font-size: 15px; }
+.nav a:hover { color: var(--text); text-decoration: none; }
+
+/* Held */
+.hero { padding: 86px 0 64px; text-align: center; }
+.hero h1 { font-size: 44px; line-height: 1.1; margin: 0 0 18px; letter-spacing: -0.5px; }
+.hero .grad {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 auto 30px; }
+.btn {
+  display: inline-block; padding: 13px 26px; border-radius: 11px; font-weight: 600;
+  background: linear-gradient(90deg, var(--accent), var(--accent2)); color: #fff;
+}
+.btn:hover { text-decoration: none; opacity: 0.92; }
+.btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--text); margin-left: 10px; }
+
+/* Abschnitte */
+section { padding: 52px 0; border-top: 1px solid var(--border); }
+section h2 { font-size: 30px; margin: 0 0 10px; letter-spacing: -0.3px; }
+.lead { color: var(--muted); font-size: 18px; margin: 0 0 32px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 22px;
+}
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+.steps li { position: relative; padding: 0 0 20px 52px; }
+.steps li::before {
+  counter-increment: s; content: counter(s);
+  position: absolute; left: 0; top: -2px; width: 34px; height: 34px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 700;
+}
+
+/* Rechtstexte */
+.legal { padding: 48px 0 80px; }
+.legal h1 { font-size: 34px; margin: 0 0 6px; }
+.legal .updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+.legal h2 { font-size: 21px; margin: 34px 0 8px; }
+.legal h3 { font-size: 17px; margin: 22px 0 6px; }
+.legal p, .legal li { color: #cdd3de; }
+.legal ul { padding-left: 22px; }
+.lang-note {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 16px; color: var(--muted); font-size: 14px; margin-bottom: 30px;
+}
+
+/* Fuß */
+footer { border-top: 1px solid var(--border); padding: 30px 0 50px; color: var(--muted); font-size: 14px; }
+footer .links a { color: var(--muted); margin-right: 20px; }
+footer .links a:hover { color: var(--text); }
+footer .copy { margin-top: 14px; }
+
+@media (max-width: 680px) {
+  .hero h1 { font-size: 34px; }
+  .grid { grid-template-columns: 1fr; }
+  .nav a { margin-left: 14px; font-size: 14px; }
+  .btn.ghost { margin-left: 0; margin-top: 10px; }
+}

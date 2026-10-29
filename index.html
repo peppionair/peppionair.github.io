@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeroClip – Desktop-Tool zum Erstellen und Veröffentlichen von Kurzvideos</title>
+<meta name="description" content="ZeroClip ist ein Desktop-Programm, mit dem Creator aus eigenen oder lizenzfreien Videos kurze Hochformat-Clips erstellen und über die offizielle TikTok-Schnittstelle veröffentlichen.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><img src="icon.png" alt="ZeroClip"> ZeroClip</div>
+    <nav class="nav">
+      <a href="#features">Funktionen</a>
+      <a href="#how">So funktioniert's</a>
+      <a href="privacy.html">Datenschutz</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Kurzvideos erstellen und <span class="grad">direkt veröffentlichen</span></h1>
+    <p>ZeroClip ist ein Desktop-Programm für Creator. Es schneidet aus eigenen oder lizenzfreien Videos
+       kurze Hochformat-Clips, versieht sie mit Text und Stimme und veröffentlicht sie über die
+       offizielle TikTok-Schnittstelle – direkt oder als Entwurf.</p>
+    <a class="btn" href="#how">So funktioniert's</a>
+    <a class="btn ghost" href="privacy.html">Datenschutz &amp; Rechtliches</a>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Funktionen</h2>
+      <p class="lead">Von der Rohaufnahme bis zum fertigen Post – in einem Programm.</p>
+      <div class="grid">
+        <div class="card"><h3>Highlights automatisch finden</h3><p>ZeroClip erkennt ruhige Szenen mit einer Person oder einem Tier im Fokus und schneidet daraus Clips im 9:16-Format.</p></div>
+        <div class="card"><h3>Lizenzfreies Material</h3><p>Optionale Suche nach lizenzfreien Videos bei Pixabay und Pexels, mit Quellenangabe.</p></div>
+        <div class="card"><h3>Text &amp; Sprachausgabe</h3><p>Sprüche werden eingeblendet und auf Wunsch von einer KI-Stimme vorgelesen (ElevenLabs oder Google).</p></div>
+        <div class="card"><h3>Veröffentlichen auf TikTok</h3><p>Über die offizielle Content Posting API – als öffentlicher Beitrag oder als Entwurf im TikTok-Postfach.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>So funktioniert die TikTok-Veröffentlichung</h2>
+      <p class="lead">ZeroClip hält sich an die Vorgaben der TikTok Content Posting API.</p>
+      <ol class="steps">
+        <li><strong>Anmelden</strong> – Der Creator meldet sich mit seinem eigenen TikTok-Konto über den offiziellen Login (Login Kit) an und erteilt die Freigabe.</li>
+        <li><strong>Beitrag vorbereiten</strong> – Vor jeder Veröffentlichung ruft ZeroClip die aktuellen Kontodaten ab und zeigt Sichtbarkeit, Kommentar-, Duett- und Stitch-Einstellungen entsprechend an. Es gibt keine Voreinstellung der Sichtbarkeit.</li>
+        <li><strong>Prüfen &amp; bestätigen</strong> – Der Creator sieht eine Vorschau, wählt die Einstellungen und bestätigt die Veröffentlichung. Dabei stimmt er den verlinkten TikTok-Bedingungen zu.</li>
+        <li><strong>Veröffentlichen</strong> – ZeroClip lädt das Video über die offizielle Schnittstelle hoch und zeigt den Status an.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Für wen ist ZeroClip?</h2>
+      <p class="lead">Für Content-Creator, die regelmäßig kurze Videos produzieren und ihren Arbeitsablauf
+         auf dem eigenen Rechner bündeln möchten. ZeroClip läuft lokal; es gibt keinen Server und keine
+         Weitergabe von Daten an Dritte.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="privacy.html">Datenschutzerklärung</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="privacy.html#impressum">Impressum</a>
+    </div>
+    <div class="copy">© <span id="y">2026</span> ZeroClip. Kein Produkt von oder verbunden mit TikTok, ByteDance, Pixabay, Pexels, ElevenLabs oder Google.</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
